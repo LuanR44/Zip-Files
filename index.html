@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIP Files</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ZIP Files</h1>
+      <form id="upload-form">
+        <label for="operation">Selecione a opção:</label>
+        <div id="operation">
+          <input
+            type="radio"
+            id="compress"
+            name="operation"
+            value="compress"
+            checked
+          />
+          <label for="compress">Compactar</label>
+          <input
+            type="radio"
+            id="decompress"
+            name="operation"
+            value="decompress"
+          />
+          <label for="decompress">Descompactar</label>
+        </div>
+        <label for="file-input">Selecione o arquivo:</label>
+        <input type="file" id="file-input" name="file" required />
+        <label for="compression-format"
+          >Escolha o formato de compactação:</label
+        >
+        <select id="compression-format" name="compression-format">
+          <option value="zip">ZIP</option>
+        </select>
+        <button type="submit" id="upload-button">Enviar e Compactar</button>
+      </form>
+      <div id="download-link" class="hidden"></div>
+      <div class="footnote">
+        Feito por <a href="https://github.com/LuanR44" target="_blank">Luan</a>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
